@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// Here the class is basically a struct that ate the apple of knowledge from the Eden Garden
-// (like when Adam and Eve felt emberessment so they put clothes on themselves, they used to be naked before)
 class BinOp {
     private:
         double operand1;
@@ -21,12 +19,6 @@ class BinOp {
             } else {
                 return operand1 - operand2;
             }
-        }
-        //here we append the clothes on Adam and Eve, but without looking at them naked, we tell the postAPI to look at them
-        void postAPI(double op1, char op, double op2){
-            operand1 = op1;
-            operation = op;
-            operand2 = op2;
         }
 };
 
