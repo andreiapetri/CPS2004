@@ -30,6 +30,22 @@ class BinOp {
         }
 };
 
+class Person {
+    public:
+        //HERE virtual is used for RUNTIME POLYMORPHISM
+        virtual void introduce(){
+            cout<< "Im a person" << endl;
+        };
+};
+
+//here student inherits the public attributes of Person
+class Student: public Person{
+    public:
+        void introduce() override{
+            cout<< "Im a student"<< endl;
+        }
+};
+
 int main() {
 
     BinOp expression1(10,'+',20);
@@ -39,6 +55,17 @@ int main() {
     cout << expression1.evaluate() << endl;
     cout << expression2.evaluate() << endl;
     cout << expression3.evaluate() << endl;
+
+    Student thisguy1;
+    Person thisguy2;
+
+    Person *ptr = &thisguy1;
+    ptr->introduce();
+
+    thisguy1.introduce();
+    //here we can still call the hidden introduce inherited from Person object/class
+    thisguy1.Person::introduce();
+    thisguy2.introduce();
 
     return 0;
 }
