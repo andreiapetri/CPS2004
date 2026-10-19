@@ -38,11 +38,23 @@ class Person {
         };
 };
 
+class IDCard {
+    public:
+     void show(){
+        cout << "This is the ID Card" << endl;
+     }
+};
+
 //here student inherits the public attributes of Person
 class Student: public Person{
+    private: 
+        IDCard card;
     public:
         void introduce() override{
             cout<< "Im a student"<< endl;
+        }
+        void showCard() {
+            card.show();
         }
 };
 
@@ -66,6 +78,7 @@ int main() {
     //here we can still call the hidden introduce inherited from Person object/class
     thisguy1.Person::introduce();
     thisguy2.introduce();
+    thisguy1.showCard();
 
     return 0;
 }
