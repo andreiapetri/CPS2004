@@ -1,0 +1,5 @@
+# Compiled C++ files
+*.o
+*.exe
+build/
+01_foundations/program
