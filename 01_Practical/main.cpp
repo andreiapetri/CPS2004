@@ -80,5 +80,12 @@ int main() {
     thisguy2.introduce();
     thisguy1.showCard();
 
+    double x, z;
+    char y;
+    cin >> x >> y >> z;
+
+    BinOp expression(x,y,z);
+    cout<<expression.evaluate()<<endl;
+
     return 0;
 }
